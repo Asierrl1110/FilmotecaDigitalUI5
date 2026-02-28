@@ -1,0 +1,32 @@
+[
+    {
+        "nombre": "Inception",
+        "añoEstreno": 2010,
+        "director": "Christopher Nolan",
+        "pais": "Estados Unidos"
+    },
+    {
+        "nombre": "Parasite",
+        "añoEstreno": 2019,
+        "director": "Bong Joon-ho",
+        "pais": "Corea del Sur"
+    },
+    {
+        "nombre": "Amélie",
+        "añoEstreno": 2001,
+        "director": "Jean-Pierre Jeunet",
+        "pais": "Francia"
+    },
+    {
+        "nombre": "Spirited Away",
+        "añoEstreno": 2001,
+        "director": "Hayao Miyazaki",
+        "pais": "Japón"
+    },
+    {
+        "nombre": "The Godfather",
+        "añoEstreno": 1972,
+        "director": "Francis Ford Coppola",
+        "pais": "Estados Unidos"
+    }
+]

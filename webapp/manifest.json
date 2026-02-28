@@ -1,0 +1,139 @@
+{
+  "_version": "1.82.0",
+  "sap.app": {
+    "id": "filmotecadigital",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.20.4",
+      "toolsId": "677c55f1-d6ea-4eb9-9476-cc3c912a53ac"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.145.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "filmotecadigital.i18n.i18n"
+        }
+      },
+      "usuarios": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/usuarios.json"
+      },
+      "peliculas": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/peliculas.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "filmotecadigital.view",
+        "async": true,
+        "viewPath": "filmotecadigital.view"
+      },
+      "routes": [
+        {
+          "name": "RouteVistaInicio",
+          "pattern": ":?query:",
+          "target": [
+            "TargetVistaInicio"
+          ]
+        },
+        {
+          "name": "RouteVistaPrincipal",
+          "pattern": "/principal",
+          "target": [
+            "TargetVistaPrincipal"
+          ]
+        },
+        {
+          "name": "RouteVistaDetalle",
+          "pattern": "/principal/detalle/{index}",
+          "target": [
+            "TargetVistaDetalle"
+          ]
+        },
+        {
+          "name": "RouteVistaCreacionPeli",
+          "pattern": "/principal/createpeli",
+          "target": [
+            "TargetVistaCreacionPeli"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetVistaInicio": {
+          "id": "VistaInicio",
+          "name": "VistaInicio"
+        },
+        "TargetVistaPrincipal": {
+          "id": "VistaPrincipal",
+          "name": "VistaPrincipal"
+        },
+        "TargetVistaCreacionPeli": {
+          "id": "VistaCreacionPeli",
+          "name": "VistaCreacionPeli"
+        },
+        "TargetVistaDetalle": {
+          "id": "VistaDetalle",
+          "name": "VistaDetalle"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "filmotecadigital.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

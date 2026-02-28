@@ -1,0 +1,42 @@
+<mvc:View controllerName="filmotecadigital.controller.VistaPrincipal"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page2" title="{i18n>title}">
+        <Button id="btnCreate" text="Añadir Pelicula" press="onCreatePelicula"></Button>
+        <Table
+            id="tablaPeliculas"
+            items="{peliculas>/}"
+            mode="SingleSelectMaster"
+            inset="false"
+            selectionChange="onFilaSelect">
+            <columns>
+                <Column id="col1">
+                    <Text id="text1" text="{i18n>nombre}"></Text>
+                </Column>
+                <Column id="col2">
+                    <Text id="text2" text="{i18n>anho}"></Text>
+                </Column>
+                <Column id="col3">
+                    <Text id="text3" text="{i18n>director}"></Text>
+                </Column>
+                <Column id="col4">
+                    <Text id="text4" text="{i18n>pais}"></Text>
+                </Column>
+                <Column id="col5">
+                    <Text id="text5"></Text>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem type="Navigation" id="columnlistitem">
+                    <cells>
+                        <Text id="colNombre" text="{peliculas>nombre}"></Text>
+                        <Text id="colEstreno" text="{peliculas>añoEstreno}"></Text>
+                        <Text id="colDirector" text="{peliculas>director}"></Text>
+                        <Text id="colPais" text="{peliculas>pais}"></Text>
+                        <Button id="btnBorrarPelicula" text="Borrar" press="onDeletePelicula"></Button>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>

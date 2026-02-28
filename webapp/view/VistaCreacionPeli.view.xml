@@ -1,0 +1,29 @@
+<mvc:View controllerName="filmotecadigital.controller.VistaCreacionPeli"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page3" title="{i18n>title}">
+        <VBox id="vbox2">
+            <HBox id="hboxNombre">
+                <Label id="lblNombre" text="{i18n>nombre}:"></Label>
+                <Input id="inputNombre" type="Text" placeholder="{i18n>nombre}"></Input>
+            </HBox>
+            <HBox id="hboxAnhoEstreno">
+                <Label id="lblAnhoEstreno" text="{i18n>anho}:"></Label>
+                <DatePicker
+                    id="dpAnho"
+                    displayFormat="yyyy"
+                    valueFormat="yyyy"
+                    placeholder="{i18n>anho}"/>
+            </HBox>
+            <HBox id="hboxDirector">
+                <Label id="lblDirector" text="{i18n>director}:"></Label>
+                <Input id="inputDirector" type="Text" placeholder="{i18n>director}"></Input>
+            </HBox>
+            <HBox id="hboxPais">
+                <Label id="lblPais" text="{i18n>pais}:"></Label>
+                <Input id="inputPais" type="Text" placeholder="{i18n>pais}"></Input>
+            </HBox>
+            <Button id="btnGuardarPeli" text="{i18n>adpelicula}" press="onCreatePelicula"></Button>
+        </VBox>
+    </Page>
+</mvc:View>

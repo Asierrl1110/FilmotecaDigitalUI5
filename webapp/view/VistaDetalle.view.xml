@@ -1,0 +1,25 @@
+<mvc:View controllerName="filmotecadigital.controller.VistaDetalle"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page4" title="{i18n>title}">
+        <Text id="text-title" text="{i18n>title-detalles}"></Text>
+        <VBox id="vbox3">
+            <HBox id="hbox1">
+                <Label id="lblNombre1" text="{i18n>nombre}:"></Label>
+                <Input id="inpNombre" type="Text" placeholder="{i18n>nombre}" enabled="false"></Input>
+            </HBox>
+            <HBox id="hbox2">
+                <Label id="lblAnho" text="{i18n>anho}:"></Label>
+                <Input id="inpAnho" type="Text" placeholder="{i18n>anho}" enabled="false"></Input>
+            </HBox>
+            <HBox id="hbox3">
+                <Label id="lblDirector1" text="{i18n>director}:"></Label>
+                <Input id="inpDirector" type="Text" placeholder="{i18n>director}" enabled="false"></Input>
+            </HBox>
+            <HBox id="hbox4">
+                <Label id="lblPais1" text="{i18n>pais}:"></Label>
+                <Input id="inpPais" type="Text" placeholder="{i18n>pais}" enabled="false"></Input>
+            </HBox>
+        </VBox>
+    </Page>
+</mvc:View>

@@ -1,0 +1,20 @@
+<mvc:View controllerName="filmotecadigital.controller.VistaInicio"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <VBox id="vbox">
+            <HBox id="hboxUsuario">
+                <Label id="lblUsuario" text="{i18n>usuario}:"></Label>
+                <Input id="inputUsuario" type="Text" placeholder="{i18n>inUsuario}"></Input>
+            </HBox>
+            <HBox id="hboxClave">
+                <Label id="lblClave" text="{i18n>clave}:"></Label>
+                <Input id="inputClave" type="Number" placeholder="{i18n>inClave}"></Input>
+            </HBox>
+            <HBox id="hboxBotones">
+                <Button id="btnIniciarSesion" text="{i18n>inicio}" press="onIniciarSesion"></Button>
+                <Button id="btnCancelar" text="{i18n>cancelar}" press="onCancelar"></Button>
+            </HBox>
+        </VBox>
+    </Page>
+</mvc:View>
