@@ -20,10 +20,10 @@ sap.ui.define([
             var oPelicula = this.getOwnerComponent().getModel("peliculas").getData()[this._iIndex];
             
             // Asignamos los valores de la pelicula seleccionado a los campos de la vista
-            this.getView().byId("inpNombre").setValue(oPelicula.nombre);
-            this.getView().byId("inpAnho").setValue(oPelicula.añoEstreno);
-            this.getView().byId("inpDirector").setValue(oPelicula.director);
-            this.getView().byId("inpPais").setValue(oPelicula.pais);
+            this.getView().byId("inpNombre").setValue(oPelicula.Nombre);
+            this.getView().byId("inpAnho").setValue(oPelicula.AnhoEstreno);
+            this.getView().byId("inpDirector").setValue(oPelicula.Director);
+            this.getView().byId("inpPais").setValue(oPelicula.Pais);
         },
         onEditar : function(){
             // Creamos un objeto con los datos actualizados de la película
