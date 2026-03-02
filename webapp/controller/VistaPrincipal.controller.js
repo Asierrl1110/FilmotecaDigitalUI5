@@ -80,6 +80,23 @@ sap.ui.define([
             } else {
                 oBinding.filter([]);
             }
+        },
+        onFilterByCountry : function(oEvent){
+            // Obtenemos el pais seleccionado
+            var sCountry = oEvent.getParameter("selectedItem").getKey();
+            // Obtenemos la tabla de películas
+            var oTable = this.byId("tablaPeliculas");
+            // Obtenemos el binding de la tabla
+            var oBinding = oTable.getBinding("items");
+
+            // Verificamos que el usuario ha seleccionado un pais
+            if(sCountry){
+                // Aplicamos filtro al país
+                var oFilter = new sap.ui.model.Filter("pais", sap.ui.model.FilterOperator.EQ, sCountry);
+                oBinding.filter([oFilter]);
+            }else{
+                oBinding.filter([]);
+            }
         }
     });
 });

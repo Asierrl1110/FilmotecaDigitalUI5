@@ -1,9 +1,19 @@
-<mvc:View controllerName="filmotecadigital.controller.VistaPrincipal"
+<mvc:View xmlns:core="sap.ui.core" controllerName="filmotecadigital.controller.VistaPrincipal"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page2" title="{i18n>title}">
         <Toolbar id="toolbar">
-            <SearchField id="searchField" width="300px" liveChange=".onSearch" placeholder="Buscar"></SearchField>
+            <SearchField id="searchField" width="250px" liveChange=".onSearch" placeholder="Buscar"></SearchField>
+            <Select id="select" width="150px" change=".onFilterByCountry">
+                <items>
+                    <core:Item id="iTodos" key="" text="Todos"/>
+                    <core:Item id="iEspanha" key="España" text="España"/>
+                    <core:Item id="iEEUU" key="Estados Unidos" text="Estados Unidos"/>
+                    <core:Item id="iFrancia" key="Francia" text="Francia"/>
+                    <core:Item id="iJapon" key="Japón" text="Japón"/>
+                    <core:Item id="iCorea" key="Corea del Sur" text="Corea del Sur"/>
+                </items>
+            </Select>
         </Toolbar>
         <Button id="btnCreate" text="Añadir Pelicula" press="onCreatePelicula"></Button>
         <Table
