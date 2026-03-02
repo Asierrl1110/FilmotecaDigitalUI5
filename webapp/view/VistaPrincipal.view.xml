@@ -2,6 +2,9 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page2" title="{i18n>title}">
+        <Toolbar id="toolbar">
+            <SearchField id="searchField" width="300px" liveChange=".onSearch" placeholder="Buscar"></SearchField>
+        </Toolbar>
         <Button id="btnCreate" text="Añadir Pelicula" press="onCreatePelicula"></Button>
         <Table
             id="tablaPeliculas"

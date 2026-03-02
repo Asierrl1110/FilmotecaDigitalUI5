@@ -52,6 +52,34 @@ sap.ui.define([
             router.navTo("RouteVistaDetalle", {
                 index: iIndex
             });
+        },
+        onSearch: function (oEvent) {
+            // Obtenemos el texto ingresado
+            var sQuery = oEvent.getParameter("newValue");
+            // Obtenemos la tabla de películas
+            var oTable = this.getView().byId("tablaPeliculas");
+            // Obtenemos el binding de la tabla
+            var oBinding = oTable.getBinding("items");
+
+            // Verificamos que el usuario haya introducido texto en el search field
+            if (sQuery) {
+                // Aplicamos filtros individuales al nombre, director y pais
+                var aFilters = [
+                    new sap.ui.model.Filter("nombre", sap.ui.model.FilterOperator.Contains, sQuery)
+                    //new sap.ui.model.Filter("director", sap.ui.model.FilterOperator.Contains, sQuery),
+                    //new sap.ui.model.Filter("pais", sap.ui.model.FilterOperator.Contains, sQuery)
+                ];
+
+                var oFilter = new sap.ui.model.Filter({
+                    filters: aFilters,
+                    and: false // Los filtros que combinan con OR
+                });
+
+                // Aplicamos el filtro
+                oBinding.filter(oFilter);
+            } else {
+                oBinding.filter([]);
+            }
         }
     });
 });
