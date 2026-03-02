@@ -3,20 +3,27 @@
     xmlns="sap.m">
     <Page id="page2" title="{i18n>title}">
         <Toolbar id="toolbar">
-            <SearchField id="searchField" width="250px" liveChange=".onSearch" placeholder="Buscar"></SearchField>
-            <Select id="select" width="150px" change=".onFilterByCountry">
+            <SearchField id="searchField" width="250px" liveChange=".onSearch" placeholder="{i18n>buscar}"></SearchField>
+            <Select id="selectFilterCountry" width="150px" change=".onFilterByCountry">
                 <items>
-                    <core:Item id="iTodos" key="" text="Todos"/>
-                    <core:Item id="iEspanha" key="España" text="España"/>
-                    <core:Item id="iEEUU" key="Estados Unidos" text="Estados Unidos"/>
-                    <core:Item id="iFrancia" key="Francia" text="Francia"/>
-                    <core:Item id="iJapon" key="Japón" text="Japón"/>
-                    <core:Item id="iCorea" key="Corea del Sur" text="Corea del Sur"/>
+                    <core:Item id="iTodos" key="" text="{i18n>pais-all}"/>
+                    <core:Item id="iEspanha" key="España" text="{i18n>pais-esp}"/>
+                    <core:Item id="iEEUU" key="Estados Unidos" text="{i18n>pais-eeuu}"/>
+                    <core:Item id="iFrancia" key="Francia" text="{i18n>pais-fr}"/>
+                    <core:Item id="iJapon" key="Japón" text="{i18n>pais-jp}"/>
+                    <core:Item id="iCorea" key="Corea del Sur" text="{i18n>pais-kr}"/>
                 </items>
             </Select>
-            <Button id="btnOrdenar" text="Ordenar por año" press=".onOrdenarPorAnho"/>
+            <Button id="btnOrdenar" text="{i18n>ordenarAnho}" press=".onOrdenarPorAnho"/>
+            <Select id="selectLanguage" change=".onLanguageChange" width="120px">
+                <items>
+                    <core:Item id="es" key="en" text="EN"/>
+                    <core:Item id="en" key="es" text="ES"/>
+                    <core:Item id="it" key="it" text="IT"/>
+                </items>
+            </Select>
         </Toolbar>
-        <Button id="btnCreate" text="Añadir Pelicula" press="onCreatePelicula"></Button>
+        <Button id="btnCreate" text="{i18n>adpelicula}" press="onCreatePelicula"></Button>
         <Table
             id="tablaPeliculas"
             items="{peliculas>/}"
@@ -47,7 +54,7 @@
                         <Text id="colEstreno" text="{peliculas>añoEstreno}"></Text>
                         <Text id="colDirector" text="{peliculas>director}"></Text>
                         <Text id="colPais" text="{peliculas>pais}"></Text>
-                        <Button id="btnBorrarPelicula" text="Borrar" press="onDeletePelicula"></Button>
+                        <Button id="btnBorrarPelicula" text="{i18n>borrar}" press="onDeletePelicula"></Button>
                     </cells>
                 </ColumnListItem>
             </items>

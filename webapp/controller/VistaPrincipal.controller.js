@@ -112,6 +112,11 @@ sap.ui.define([
             // Establecemos la ordenación por la variable de año de estreno
             var oSorter = new sap.ui.model.Sorter("añoEstreno", this._bSortDescending);
             oBinding.sort(oSorter);
+        },
+        onLanguageChange : function(oEvent){
+            var sSelectedLanguage = oEvent.getParameter("selectedItem").getKey();
+
+            sap.ui.getCore().getConfiguration().setLanguage(sSelectedLanguage);
         }
     });
 });
