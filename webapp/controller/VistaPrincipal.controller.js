@@ -6,6 +6,8 @@ sap.ui.define([
 
     return Controller.extend("filmotecadigital.controller.VistaPrincipal", {
         onInit() {
+            // Variable de ordenación por año (false-descendente, true-ascendente)
+            this._bSortDescending = true;
         },
         onCreatePelicula: function () {
             var router = sap.ui.core.UIComponent.getRouterFor(this);
@@ -97,6 +99,19 @@ sap.ui.define([
             }else{
                 oBinding.filter([]);
             }
+        },
+        onOrdenarPorAnho : function(oEvent){
+            // Obtenemos la tabla de películas
+            var oTable = this.byId("tablaPeliculas");
+            // Obtenemos el binding de la tabla
+            var oBinding = oTable.getBinding("items");
+
+            // Cambiamos la variable de ordenación por año
+            this._bSortDescending = !this._bSortDescending;
+
+            // Establecemos la ordenación por la variable de año de estreno
+            var oSorter = new sap.ui.model.Sorter("añoEstreno", this._bSortDescending);
+            oBinding.sort(oSorter);
         }
     });
 });

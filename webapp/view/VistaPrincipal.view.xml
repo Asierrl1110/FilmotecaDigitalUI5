@@ -14,6 +14,7 @@
                     <core:Item id="iCorea" key="Corea del Sur" text="Corea del Sur"/>
                 </items>
             </Select>
+            <Button id="btnOrdenar" text="Ordenar por año" press=".onOrdenarPorAnho"/>
         </Toolbar>
         <Button id="btnCreate" text="Añadir Pelicula" press="onCreatePelicula"></Button>
         <Table
