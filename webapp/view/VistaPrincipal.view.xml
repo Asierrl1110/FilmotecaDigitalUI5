@@ -50,10 +50,10 @@
             <items>
                 <ColumnListItem type="Navigation" id="columnlistitem">
                     <cells>
-                        <Text id="colNombre" text="{peliculas>nombre}"></Text>
-                        <Text id="colEstreno" text="{peliculas>añoEstreno}"></Text>
-                        <Text id="colDirector" text="{peliculas>director}"></Text>
-                        <Text id="colPais" text="{peliculas>pais}"></Text>
+                        <Text id="colNombre" text="{peliculas>Nombre}"></Text>
+                        <Text id="colEstreno" text="{peliculas>AnhoEstreno}"></Text>
+                        <Text id="colDirector" text="{peliculas>Director}"></Text>
+                        <Text id="colPais" text="{peliculas>Pais}"></Text>
                         <Button id="btnBorrarPelicula" text="{i18n>borrar}" press="onDeletePelicula"></Button>
                     </cells>
                 </ColumnListItem>

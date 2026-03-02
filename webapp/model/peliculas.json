@@ -1,32 +1,32 @@
 [
     {
-        "nombre": "Inception",
-        "añoEstreno": 2010,
-        "director": "Christopher Nolan",
-        "pais": "Estados Unidos"
+        "Nombre": "Inception",
+        "AnhoEstreno": 2010,
+        "Director": "Christopher Nolan",
+        "Pais": "Estados Unidos"
     },
     {
-        "nombre": "Parasite",
-        "añoEstreno": 2019,
-        "director": "Bong Joon-ho",
-        "pais": "Corea del Sur"
+        "Nombre": "Parasite",
+        "AnhoEstreno": 2019,
+        "Director": "Bong Joon-ho",
+        "Pais": "Corea del Sur"
     },
     {
-        "nombre": "Amélie",
-        "añoEstreno": 2001,
-        "director": "Jean-Pierre Jeunet",
-        "pais": "Francia"
+        "Nombre": "Amélie",
+        "AnhoEstreno": 2001,
+        "Director": "Jean-Pierre Jeunet",
+        "Pais": "Francia"
     },
     {
-        "nombre": "Spirited Away",
-        "añoEstreno": 2001,
-        "director": "Hayao Miyazaki",
-        "pais": "Japón"
+        "Nombre": "Spirited Away",
+        "AnhoEstreno": 2001,
+        "Director": "Hayao Miyazaki",
+        "Pais": "Japón"
     },
     {
-        "nombre": "The Godfather",
-        "añoEstreno": 1972,
-        "director": "Francis Ford Coppola",
-        "pais": "Estados Unidos"
+        "Nombre": "The Godfather",
+        "AnhoEstreno": 1972,
+        "Director": "Francis Ford Coppola",
+        "Pais": "Estados Unidos"
     }
 ]

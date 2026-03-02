@@ -28,10 +28,10 @@ sap.ui.define([
         onEditar : function(){
             // Creamos un objeto con los datos actualizados de la película
             var oNewPelicula = {
-                nombre: this.getView().byId("inpNombre").getValue(),
-                añoEstreno: this.getView().byId("inpAnho").getValue(),
-                director: this.getView().byId("inpDirector").getValue(),
-                pais: this.getView().byId("inpPais").getValue()
+                Nombre: this.getView().byId("inpNombre").getValue(),
+                AnhoEstreno: this.getView().byId("inpAnho").getValue(),
+                Director: this.getView().byId("inpDirector").getValue(),
+                Pais: this.getView().byId("inpPais").getValue()
             }
 
             // Obtenemos el modelo global

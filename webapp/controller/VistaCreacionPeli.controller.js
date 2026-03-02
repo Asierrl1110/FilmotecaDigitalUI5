@@ -23,10 +23,10 @@ sap.ui.define([
                 var aPeliculas = oPeliculasModel.getData();
                 // Añadimos a los datos del modelo la nueva pelicula
                 aPeliculas.push({
-                    nombre: nombre,
-                    añoEstreno: anho,
-                    director: director,
-                    pais: pais
+                    Nombre: nombre,
+                    AnhoEstreno: anho,
+                    Director: director,
+                    Pais: pais
                 });
                 // Actualizamos los datos
                 oPeliculasModel.setData(aPeliculas);
