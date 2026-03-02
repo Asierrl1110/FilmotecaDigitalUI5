@@ -67,7 +67,7 @@ sap.ui.define([
             if (sQuery) {
                 // Aplicamos filtros individuales al nombre, director y pais
                 var aFilters = [
-                    new sap.ui.model.Filter("nombre", sap.ui.model.FilterOperator.Contains, sQuery)
+                    new sap.ui.model.Filter("Nombre", sap.ui.model.FilterOperator.Contains, sQuery)
                     //new sap.ui.model.Filter("director", sap.ui.model.FilterOperator.Contains, sQuery),
                     //new sap.ui.model.Filter("pais", sap.ui.model.FilterOperator.Contains, sQuery)
                 ];
@@ -94,7 +94,7 @@ sap.ui.define([
             // Verificamos que el usuario ha seleccionado un pais
             if(sCountry){
                 // Aplicamos filtro al país
-                var oFilter = new sap.ui.model.Filter("pais", sap.ui.model.FilterOperator.EQ, sCountry);
+                var oFilter = new sap.ui.model.Filter("Pais", sap.ui.model.FilterOperator.EQ, sCountry);
                 oBinding.filter([oFilter]);
             }else{
                 oBinding.filter([]);
@@ -110,7 +110,7 @@ sap.ui.define([
             this._bSortDescending = !this._bSortDescending;
 
             // Establecemos la ordenación por la variable de año de estreno
-            var oSorter = new sap.ui.model.Sorter("añoEstreno", this._bSortDescending);
+            var oSorter = new sap.ui.model.Sorter("AnhoEstreno", this._bSortDescending);
             oBinding.sort(oSorter);
         },
         onLanguageChange : function(oEvent){
